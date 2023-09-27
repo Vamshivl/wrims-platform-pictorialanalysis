@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.vassarlabs.pictorialanalysis.service</groupId>
+  <artifactId>platform-pictorialanalysis-service</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <properties>
+  </properties>
+
+  <parent>
+    <artifactId>platform-pictorialanalysis</artifactId>
+    <groupId>com.vassarlabs.pictorialanalysis</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <dependencies>
+      <dependency>
+          <groupId>com.vassarlabs.pictorialanalysis.api</groupId>
+          <artifactId>platform-pictorialanalysis-api</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+          <scope>compile</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.vassarlabs.pictorialanalysis.impl</groupId>
+          <artifactId>platform-pictorialanalysis-impl</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+          <scope>compile</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.vassarlabs.taskmngr.api</groupId>
+          <artifactId>platform-taskmngr-api</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+          <scope>compile</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.vassarlabs.taskmngr.impl</groupId>
+          <artifactId>platform-taskmngr-impl</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+          <scope>compile</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.vassarlabs.boundarydetection.api</groupId>
+          <artifactId>platform-boundarydetection-api</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+          <scope>compile</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.vassarlabs.boundarydetection.impl</groupId>
+          <artifactId>platform-boundarydetection-impl</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+          <scope>compile</scope>
+      </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+    </plugins>
+  </build>
+</project>

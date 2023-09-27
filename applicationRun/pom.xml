@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.vassarlabs.root</groupId>
+        <artifactId>root</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>applicationRun</artifactId>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.vassarlabs.applicationRun.ApplicationRun</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+        <!--		**************************************************************************************************************-->
+        <!-- all are under prod/platform -->
+
+    <dependencies>
+        <!-- bizevent.api -->
+        <dependency>
+            <groupId>com.vassarlabs.bizevent.api</groupId>
+            <artifactId>platform-bizevent-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- bizevent.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.bizevent.impl</groupId>
+            <artifactId>platform-bizevent-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- bizevent.kstorm -->
+        <dependency>
+            <groupId>com.vassarlabs.bizevent.kstorm</groupId>
+            <artifactId>platform-bizevent-kstorm</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+
+
+        <!-- common.ams -->
+        <dependency>
+            <groupId>com.vassarlabs.common.ams</groupId>
+            <artifactId>platform-common-ams</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.api -->
+        <dependency>
+            <groupId>com.vassarlabs.common.api</groupId>
+            <artifactId>platform-common-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.cache -->
+        <dependency>
+            <groupId>com.vassarlabs.common.cache</groupId>
+            <artifactId>platform-common-cache</artifactId>
+            <version>${vassarlabs.version}</version>
+        </dependency>
+        <!-- common.contact -->
+        <dependency>
+            <groupId>com.vassarlabs.common.contact</groupId>
+            <artifactId>platform-common-contact</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.dblogger -->
+        <dependency>
+            <groupId>com.vassarlabs.common.dblogger</groupId>
+            <artifactId>platform-common-dblogger</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.dsp.api -->
+        <dependency>
+            <groupId>com.vassarlabs.common.dsp.api</groupId>
+            <artifactId>platform-common-dsp-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.dsp.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.common.dsp.impl</groupId>
+            <artifactId>platform-common-dsp-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.email -->
+        <dependency>
+            <groupId>com.vassarlabs.common.email</groupId>
+            <artifactId>platform-common-email</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.err -->
+        <dependency>
+            <groupId>com.vassarlabs.common.err</groupId>
+            <artifactId>platform-common-err</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.exms -->
+        <dependency>
+            <groupId>com.vassarlabs.common.exms</groupId>
+            <artifactId>platform-common-exms</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.ext.api -->
+        <dependency>
+            <groupId>com.vassarlabs.common.ext.api</groupId>
+            <artifactId>platform-common-ext-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.ext.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.common.ext.impl</groupId>
+            <artifactId>platform-common-ext-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.ext.service -->
+        <dependency>
+            <groupId>com.vassarlabs.common.ext.service</groupId>
+            <artifactId>platform-common-ext-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.common.impl</groupId>
+            <artifactId>platform-common-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.init.api -->
+        <dependency>
+            <groupId>com.vassarlabs.common.init.api</groupId>
+            <artifactId>platform-common-init-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.init.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.common.init.impl</groupId>
+            <artifactId>platform-common-init-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.init.service -->
+        <dependency>
+            <groupId>com.vassarlabs.common.init.service</groupId>
+            <artifactId>platform-common-init-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.jexl.api -->
+        <dependency>
+            <groupId>com.vassarlabs.common.jexl.api</groupId>
+            <artifactId>platform-common-jexl-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.jexl.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.common.jexl.impl</groupId>
+            <artifactId>platform-common-jexl-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.jexl.service -->
+        <dependency>
+            <groupId>com.vassarlabs.common.jexl.service</groupId>
+            <artifactId>platform-common-jexl-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.logging.api -->
+        <dependency>
+            <groupId>com.vassarlabs.common.logging.api</groupId>
+            <artifactId>platform-common-logging-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.logging.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.common.logging.impl</groupId>
+            <artifactId>platform-common-logging-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.logging.service -->
+        <dependency>
+            <groupId>com.vassarlabs.common.logging.service</groupId>
+            <artifactId>platform-common-logging-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.ms -->
+        <dependency>
+            <groupId>com.vassarlabs.common.ms</groupId>
+            <artifactId>platform-common-ms</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.mscommon -->
+        <dependency>
+            <groupId>com.vassarlabs.common.mscommon</groupId>
+            <artifactId>platform-common-mscommon</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.sms -->
+        <dependency>
+            <groupId>com.vassarlabs.common.sms</groupId>
+            <artifactId>platform-common-sms</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- common.util -->
+        <dependency>
+            <groupId>com.vassarlabs.common.utils</groupId>
+            <artifactId>platform-common-utils</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+
+
+
+        <!-- config.api -->
+        <dependency>
+            <groupId>com.vassarlabs.config.api</groupId>
+            <artifactId>platform-config-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- config.conf -->
+        <dependency>
+            <groupId>com.vassarlabs.config.conf</groupId>
+            <artifactId>platform-config-conf</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- config.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.config.impl</groupId>
+            <artifactId>platform-config-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- config.service -->
+        <dependency>
+            <groupId>com.vassarlabs.config.service</groupId>
+            <artifactId>platform-config-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+
+
+
+        <!-- email.api -->
+        <dependency>
+            <groupId>com.vassarlabs.email.api</groupId>
+            <artifactId>platform-email-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- email.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.email.impl</groupId>
+            <artifactId>platform-email-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- email.kstorm -->
+        <dependency>
+            <groupId>com.vassarlabs.email.kstorm</groupId>
+            <artifactId>platform-email-kstorm</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- email.service -->
+        <dependency>
+            <groupId>com.vassarlabs.email.service</groupId>
+            <artifactId>platform-email-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+
+
+
+        <!-- eventmapper.api -->
+        <dependency>
+            <groupId>com.vassarlabs.eventmapper.api</groupId>
+            <artifactId>platform-eventmapper-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- eventmapper.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.eventmapper.impl</groupId>
+            <artifactId>platform-eventmapper-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- eventmapper.service -->
+        <dependency>
+            <groupId>com.vassarlabs.eventmapper.service</groupId>
+            <artifactId>platform-eventmapper-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- eventmapper.xsd -->
+        <dependency>
+            <groupId>com.vassarlabs.eventmapper.xsd</groupId>
+            <artifactId>platform-eventmapper-xsd</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+
+
+
+        <!-- eventmd.api -->
+        <dependency>
+            <groupId>com.vassarlabs.eventmd.api</groupId>
+            <artifactId>platform-eventmd-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- eventmd.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.eventmd.impl</groupId>
+            <artifactId>platform-eventmd-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- eventmd.service -->
+        <dependency>
+            <groupId>com.vassarlabs.eventmd.service</groupId>
+            <artifactId>platform-eventmd-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+
+
+
+        <!-- kstorm.api -->
+        <dependency>
+            <groupId>com.vassarlabs.kstorm.api</groupId>
+            <artifactId>platform-kstorm-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- kstorm.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.kstorm.impl</groupId>
+            <artifactId>platform-kstorm-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- kstorm.service -->
+        <dependency>
+            <groupId>com.vassarlabs.kstorm.service</groupId>
+            <artifactId>platform-kstorm-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+        <!-- largeobject.api -->
+        <dependency>
+            <groupId>com.vassarlabs.largeobject.api</groupId>
+            <artifactId>platform-largeobject-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- largeobject.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.largeobject.impl</groupId>
+            <artifactId>platform-largeobject-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- largeobject.service -->
+        <dependency>
+            <groupId>com.vassarlabs.largeobject.service</groupId>
+            <artifactId>platform-largeobject-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+
+
+        <!-- location.api -->
+        <dependency>
+            <groupId>com.vassarlabs.location.api</groupId>
+            <artifactId>platform-location-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- location.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.location.impl</groupId>
+            <artifactId>platform-location-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- location.service -->
+        <dependency>
+            <groupId>com.vassarlabs.location.service</groupId>
+            <artifactId>platform-location-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+
+
+
+        <!-- rawdata.api -->
+        <dependency>
+            <groupId>com.vassarlabs.rawdata.api</groupId>
+            <artifactId>platform-rawdata-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- rawdata.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.rawdata.impl</groupId>
+            <artifactId>platform-rawdata-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- rawdata.kstorm -->
+        <dependency>
+            <groupId>com.vassarlabs.rawdata.kstorm</groupId>
+            <artifactId>platform-rawdata-kstorm</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- rawdata.service -->
+        <dependency>
+            <groupId>com.vassarlabs.rawdata.service</groupId>
+            <artifactId>platform-rawdata-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+
+        <!-- sensorsystem.api -->
+        <dependency>
+            <groupId>com.vassarlabs.sensor.system.api</groupId>
+            <artifactId>platform-sensor-system-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- sensorsystem.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.sensor.system.impl</groupId>
+            <artifactId>platform-sensor-system-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- sensorsystem.kstorm -->
+        <dependency>
+            <groupId>com.vassarlabs.sensor.system.kstorm</groupId>
+            <artifactId>platform-sensor-system-kstorm</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- sensorsystem.service -->
+        <dependency>
+            <groupId>com.vassarlabs.sensor.system.service</groupId>
+            <artifactId>platform-sensor-system-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+
+        <!-- sms.api -->
+        <dependency>
+            <groupId>com.vassarlabs.sms.api</groupId>
+            <artifactId>platform-sms-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- sms.gateway.api -->
+        <dependency>
+            <groupId>com.vassarlabs.sms.gateway.api</groupId>
+            <artifactId>platform-sms-gateway-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- sms.gateway.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.sms.gateway.impl</groupId>
+            <artifactId>platform-sms-gateway-impl</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- sms.gateway.service -->
+        <dependency>
+            <groupId>com.vassarlabs.sms.gateway.service</groupId>
+            <artifactId>platform-sms-gateway-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- sms.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.sms.impl</groupId>
+            <artifactId>platform-sms-impl</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- sms.kstorm -->
+        <dependency>
+            <groupId>com.vassarlabs.sms.kstorm</groupId>
+            <artifactId>platform-sms-kstorm</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- sms.service -->
+        <dependency>
+            <groupId>com.vassarlabs.sms.service</groupId>
+            <artifactId>platform-sms-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+
+
+        <!-- spatial.api -->
+        <dependency>
+            <groupId>com.vassarlabs.spatial.api</groupId>
+            <artifactId>platform-spatial-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- sspatial.ext.api -->
+        <dependency>
+            <groupId>com.vassarlabs.spatial.ext.api</groupId>
+            <artifactId>platform-spatial-ext-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- spatial.ext.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.spatial.ext.impl</groupId>
+            <artifactId>platform-spatial-ext-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- spatial.ext.service -->
+        <dependency>
+            <groupId>com.vassarlabs.spatial.ext.service</groupId>
+            <artifactId>platform-spatial-ext-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- spatial.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.spatial.impl</groupId>
+            <artifactId>platform-spatial-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- spatial.service -->
+        <dependency>
+            <groupId>com.vassarlabs.spatial.service</groupId>
+            <artifactId>platform-spatial-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+
+        <!-- taskmngr.api -->
+        <dependency>
+            <groupId>com.vassarlabs.taskmngr.api</groupId>
+            <artifactId>platform-taskmngr-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- taskmngr.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.taskmngr.impl</groupId>
+            <artifactId>platform-taskmngr-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- taskmngr.service -->
+        <dependency>
+            <groupId>com.vassarlabs.taskmngr.service</groupId>
+            <artifactId>platform-taskmngr-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vassarlabs.iwm.gridmapping.service</groupId>
+            <artifactId>platform-gridmapping-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.vassarlabs.platform.iwm.rstats.service</groupId>
+            <artifactId>platform-iwm-rstats-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vassarlabs.platform.iwm.aggr.service</groupId>
+            <artifactId>platform-iwm-aggr-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- boundarydetection.api -->
+        <dependency>
+            <groupId>com.vassarlabs.boundarydetection.api</groupId>
+            <artifactId>platform-boundarydetection-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- boundarydetection.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.boundarydetection.impl</groupId>
+            <artifactId>platform-boundarydetection-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- boundarydetection.service -->
+        <dependency>
+            <groupId>com.vassarlabs.boundarydetection.service</groupId>
+            <artifactId>platform-boundarydetection-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!-- gisoperations.api -->
+        <dependency>
+            <groupId>com.vassarlabs.gisoperations.api</groupId>
+            <artifactId>platform-gisoperations-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- boundarydetection.impl -->
+        <dependency>
+            <groupId>com.vassarlabs.gisoperations.impl</groupId>
+            <artifactId>platform-gisoperations-impl</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- boundarydetection.service -->
+        <dependency>
+            <groupId>com.vassarlabs.gisoperations.service</groupId>
+            <artifactId>platform-gisoperations-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vassarlabs.pictorialanalysis.service</groupId>
+            <artifactId>platform-pictorialanalysis-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!--		**************************************************************************************************************-->
+
+    </dependencies>
+
+</project>

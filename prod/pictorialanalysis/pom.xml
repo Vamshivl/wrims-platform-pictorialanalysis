@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.vassarlabs.pictorialanalysis</groupId>
+  <artifactId>platform-pictorialanalysis</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <packaging>pom</packaging>
+
+  <name>platform</name>
+  <url>http://maven.apache.org</url>
+
+  <modules>
+    <module>api</module>
+    <module>impl</module>
+    <module>service</module>
+  </modules>
+  
+  <properties>
+  </properties>
+
+  <parent>
+    <groupId>com.vassarlabs.prod</groupId>
+    <artifactId>prod</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.vassarlabs.config.api</groupId>
+      <artifactId>platform-config-api</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.vassarlabs.location.api</groupId>
+      <artifactId>platform-location-api</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
