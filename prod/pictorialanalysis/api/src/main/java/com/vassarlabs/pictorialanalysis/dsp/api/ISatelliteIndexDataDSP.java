@@ -11,4 +11,6 @@ public interface ISatelliteIndexDataDSP {
     public String getRecentDateForAoiUUIDAndEntityName(String aoiUUID, String entityName) throws DSPException;
 
     public LinkedHashMap<String, Map<String,String>> getSatelliteIndexDataForStartAndEndDate(String aoiUUID, String entityName, Date startDate, Date endDate) throws DSPException;
+
+    public void deleteCropIndexData(String aoiUUID) throws DSPException;
 }

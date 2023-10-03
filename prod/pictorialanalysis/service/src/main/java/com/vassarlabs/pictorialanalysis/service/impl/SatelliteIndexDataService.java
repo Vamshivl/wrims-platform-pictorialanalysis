@@ -30,4 +30,10 @@ public class SatelliteIndexDataService implements ISatelliteIndexDataService {
         Date endDate = new Date(endTs);
         return satelliteIndexDataDSP.getSatelliteIndexDataForStartAndEndDate(aoiUUID, entityName, startDate, endDate);
     }
+
+    @Override
+    public void deleteCropIndexData(String aoiUUID) throws DSPException {
+        System.out.println("In SatelliteIndexDataService :: deleteCropIndexData");
+        satelliteIndexDataDSP.deleteCropIndexData(aoiUUID);
+    }
 }

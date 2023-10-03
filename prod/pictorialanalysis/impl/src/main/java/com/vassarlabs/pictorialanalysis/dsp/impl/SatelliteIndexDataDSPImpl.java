@@ -131,4 +131,47 @@ public class SatelliteIndexDataDSPImpl implements ISatelliteIndexDataDSP {
         }
         return dateVsSatelliteData;
     }
+
+    @Override
+    public void deleteCropIndexData(String aoiUUID) throws DSPException {
+        System.out.println("SatelliteIndexDataDSPImpl :: deleteCropIndexData");
+
+        boolean transactionResult = false;
+        String dataStoreOwnerKey = null;
+        String transactionId = null;
+        PreparedStatement ps = null;
+
+        try {
+            dataStoreOwnerKey = DataStoreContext.initDataStoreContext(dataStore);
+
+            String sqlQuery = "DELETE FROM cga_satellite_index_data where aoi_uuid = ?";
+            ps = dataStore.createPreparedStatement(sqlQuery);
+
+
+            ps.setString(1, aoiUUID);
+
+            System.out.println("SQL Query: " + ps);
+
+            transactionId = dataStore.beginTransaction();
+            ps.executeUpdate();
+            dataStore.commitTransaction(transactionId);
+            transactionResult = true;
+        } catch (SQLException se) {
+            System.out.println("SatelliteIndexDataDSPImpl - deleteCropIndexData, " + " Error while deleting");
+            se.printStackTrace();
+        } finally {
+            if (!transactionResult) {
+                dataStore.rollbackTransaction(transactionId);
+            }
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    // Do Nothing
+                }
+                ps = null;
+            }
+            DataStoreContext.clearDataStoreContext(dataStoreOwnerKey);
+        }
+    }
 }
